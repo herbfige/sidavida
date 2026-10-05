@@ -41,11 +41,6 @@ require APP_DIR . '/includes/header.php';
                 <span class="metodo__logo metodo__logo--yape">yape</span>
                 <span class="metodo__texto"><strong>Yape</strong><small>Paga desde tu app</small></span>
             </label>
-            <label class="metodo">
-                <input type="radio" name="metodo" value="plin" <?= $metodo === 'plin' ? 'checked' : '' ?>>
-                <span class="metodo__logo metodo__logo--plin">plin</span>
-                <span class="metodo__texto"><strong>Plin</strong><small>Paga desde tu app</small></span>
-            </label>
         </div>
 
         <div class="panel" data-metodo="tarjeta">
@@ -77,19 +72,17 @@ require APP_DIR . '/includes/header.php';
             <p class="instrucciones">Al confirmar, completarás el pago de <strong><?= soles2($d['monto']) ?></strong> con tu cuenta PayPal.</p>
         </div>
 
-        <?php foreach (['yape' => YAPE_NUMERO, 'plin' => PLIN_NUMERO] as $app => $numero): ?>
-        <div class="panel" data-metodo="<?= $app ?>">
+        <div class="panel" data-metodo="yape">
             <ol class="instrucciones">
-                <li>Abre tu app <?= e(METODOS_PAGO[$app]) ?> y envía <strong><?= soles2($d['monto']) ?></strong> al número <strong><?= e($numero) ?></strong> (<?= e(ORG_NOMBRE) ?>).</li>
+                <li>Abre tu app Yape y envía <strong><?= soles2($d['monto']) ?></strong> al número <strong><?= e(YAPE_NUMERO) ?></strong> (<?= e(ORG_NOMBRE) ?>).</li>
                 <li>Copia el número de operación que aparece en tu constancia y escríbelo aquí.</li>
             </ol>
             <label class="campo">
                 <span>Número de operación</span>
-                <input type="text" name="operacion_<?= $app ?>" inputmode="numeric" maxlength="12"
-                       placeholder="Ej. 01234567" value="<?= e($v['operacion_' . $app] ?? '') ?>">
+                <input type="text" name="operacion_yape" inputmode="numeric" maxlength="12"
+                       placeholder="Ej. 01234567" value="<?= e($v['operacion_yape'] ?? '') ?>">
             </label>
         </div>
-        <?php endforeach; ?>
 
         <div class="total">
             <div><span>Vas a donar:</span><strong><?= soles2($d['monto']) ?></strong></div>

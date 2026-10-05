@@ -74,10 +74,9 @@ switch ($metodo) {
         break;
 
     case 'yape':
-    case 'plin':
-        $operacion = trim($_POST['operacion_' . $metodo] ?? '');
+        $operacion = trim($_POST['operacion_yape'] ?? '');
         if (!preg_match('/^\d{6,12}$/', $operacion)) {
-            $errores[] = 'Escribe el número de operación de tu ' . METODOS_PAGO[$metodo] . ' (solo números).';
+            $errores[] = 'Escribe el número de operación de tu Yape (solo números).';
         }
         break;
 
@@ -91,7 +90,6 @@ if ($errores) {
         'metodo'         => $metodo,
         'tarjeta_nombre' => $_POST['tarjeta_nombre'] ?? '',
         'operacion_yape' => $_POST['operacion_yape'] ?? '',
-        'operacion_plin' => $_POST['operacion_plin'] ?? '',
     ]);
     redirigir('pago.php');
 }

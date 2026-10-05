@@ -3,9 +3,8 @@
 
 const ORG_NOMBRE = 'Sí, da vida';
 
-// Números a los que se envían los pagos por Yape y Plin.
+// Número al que se envían los pagos por Yape.
 const YAPE_NUMERO = '987 654 321';
-const PLIN_NUMERO = '987 654 321';
 
 // Montos sugeridos (en soles) y el impacto que explica cada uno.
 const MONTOS = [
@@ -22,7 +21,6 @@ const METODOS_PAGO = [
     'tarjeta' => 'Tarjeta de crédito/débito',
     'paypal'  => 'PayPal',
     'yape'    => 'Yape',
-    'plin'    => 'Plin',
 ];
 
 const TIPOS_DONACION = [

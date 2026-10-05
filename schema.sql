@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS donaciones (
     -- Nunca se guarda el número completo ni el CVV: solo lo necesario para el comprobante.
     tarjeta_ultimos4 CHAR(4)       NULL,
     tarjeta_marca    VARCHAR(20)   NULL,
-    -- Número de operación que el donante copia de Yape o Plin, para conciliar el pago.
+    -- Número de operación que el donante copia de Yape, para conciliar el pago.
     codigo_operacion VARCHAR(12)   NULL,
     creado_en        TIMESTAMP     NOT NULL DEFAULT CURRENT_TIMESTAMP,
     INDEX idx_email (email),
