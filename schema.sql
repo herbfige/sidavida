@@ -1,9 +1,6 @@
--- schema.sql — base de datos de donaciones de "Sí, da vida".
--- Importar con:  mysql -u root -p < schema.sql   (o desde phpMyAdmin)
-
-CREATE DATABASE IF NOT EXISTS sidavida
-    CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE sidavida;
+-- schema.sql — tabla de donaciones de "Sí, da vida".
+-- Primero crea la base de datos (en cPanel: "Bases de datos MySQL"; en tu PC: phpMyAdmin),
+-- luego selecciónala en phpMyAdmin e importa este archivo.
 
 CREATE TABLE IF NOT EXISTS donaciones (
     id               INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,

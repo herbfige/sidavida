@@ -20,10 +20,8 @@ schema.sql           Base de datos y tabla `donaciones`
 ## Cómo ejecutarlo en tu computadora
 
 1. Instala PHP 8.1+ y MySQL/MariaDB (lo más sencillo es **XAMPP** o **Laragon**).
-2. Crea la base de datos importando `schema.sql` en phpMyAdmin, o con:
-   ```bash
-   mysql -u root -p < schema.sql
-   ```
+2. En phpMyAdmin crea una base de datos llamada `sidavida` (cotejamiento `utf8mb4_unicode_ci`),
+   selecciónala e importa `schema.sql`.
 3. Si tu usuario o contraseña de MySQL no son `root` / vacía, edítalos en `config/db.php`
    o defínelos como variables de entorno.
 4. Levanta el servidor:
@@ -34,6 +32,23 @@ schema.sql           Base de datos y tabla `donaciones`
 
 Con XAMPP también puedes copiar la carpeta a `htdocs/sidavida` y abrir
 `http://localhost/sidavida/public/`.
+
+## Publicar en un hosting con cPanel
+
+Sube `public/` como `public_html/donacion/`, y `config/` e `includes/` a una carpeta
+`sidavida-app/` dentro de tu carpeta de usuario (fuera de `public_html`, para que nadie
+pueda abrirlas desde el navegador). `public/bootstrap.php` encuentra esa carpeta solo.
+
+```
+/home/USUARIO/
+├── sidavida-app/
+│   ├── config/
+│   └── includes/
+└── public_html/
+    └── donacion/      ← contenido de public/ (incluido .htaccess)
+```
+
+Requiere PHP 8.1 o superior.
 
 ## Personalizar
 

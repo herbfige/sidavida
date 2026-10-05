@@ -1,6 +1,6 @@
 <?php
 // public/pago.php — Paso 3: elección del método de pago.
-require_once __DIR__ . '/../includes/funciones.php';
+require_once __DIR__ . '/bootstrap.php';
 exigir_paso(['monto', 'tipo', 'nombre', 'email']);
 
 $flash   = flash_leer();
@@ -11,7 +11,7 @@ $metodo  = $v['metodo'] ?? 'tarjeta';
 
 $titulo = 'Pago seguro';
 $paso   = 3;
-require __DIR__ . '/../includes/header.php';
+require APP_DIR . '/includes/header.php';
 ?>
 <section class="contenedor seccion seccion--estrecha">
     <form class="tarjeta-form" method="post" action="procesar.php" id="form-pago" novalidate>
@@ -101,4 +101,4 @@ require __DIR__ . '/../includes/header.php';
         <p class="legal"><a href="datos.php">← Volver a mis datos</a></p>
     </form>
 </section>
-<?php require __DIR__ . '/../includes/footer.php'; ?>
+<?php require APP_DIR . '/includes/footer.php'; ?>

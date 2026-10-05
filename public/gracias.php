@@ -1,13 +1,13 @@
 <?php
 // public/gracias.php — Paso 4: agradecimiento y resumen de la donación.
-require_once __DIR__ . '/../includes/funciones.php';
+require_once __DIR__ . '/bootstrap.php';
 
 $comprobante = $_SESSION['ultima_donacion'] ?? null;
 if (!$comprobante) {
     redirigir('index.php');
 }
 
-require_once __DIR__ . '/../config/db.php';
+require_once APP_DIR . '/config/db.php';
 $stmt = $pdo->prepare('SELECT * FROM donaciones WHERE comprobante = ?');
 $stmt->execute([$comprobante]);
 $don = $stmt->fetch();
@@ -23,7 +23,7 @@ $estados = [
 
 $titulo = '¡Gracias!';
 $paso   = null;
-require __DIR__ . '/../includes/header.php';
+require APP_DIR . '/includes/header.php';
 ?>
 <section class="contenedor seccion seccion--estrecha">
     <div class="tarjeta-form gracias">
@@ -58,4 +58,4 @@ require __DIR__ . '/../includes/header.php';
         <p class="legal"><a href="index.php">Volver al inicio</a></p>
     </div>
 </section>
-<?php require __DIR__ . '/../includes/footer.php'; ?>
+<?php require APP_DIR . '/includes/footer.php'; ?>

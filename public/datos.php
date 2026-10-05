@@ -1,6 +1,6 @@
 <?php
 // public/datos.php — Paso 2: datos del donante.
-require_once __DIR__ . '/../includes/funciones.php';
+require_once __DIR__ . '/bootstrap.php';
 exigir_paso(['monto', 'tipo']);
 
 $flash   = flash_leer();
@@ -9,7 +9,7 @@ $v       = $flash['valores'] + donacion();
 
 $titulo = 'Tus datos';
 $paso   = 2;
-require __DIR__ . '/../includes/header.php';
+require APP_DIR . '/includes/header.php';
 ?>
 <section class="contenedor seccion seccion--estrecha">
     <form class="tarjeta-form" method="post" action="paso2.php" novalidate>
@@ -50,4 +50,4 @@ require __DIR__ . '/../includes/header.php';
         <p class="legal"><?= icono('candado', 14) ?> Tus datos están protegidos</p>
     </form>
 </section>
-<?php require __DIR__ . '/../includes/footer.php'; ?>
+<?php require APP_DIR . '/includes/footer.php'; ?>

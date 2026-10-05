@@ -5,7 +5,7 @@
 // una pasarela (por ejemplo Culqi, Niubiz o Izipay para tarjetas, y PayPal Checkout), de modo
 // que los datos de la tarjeta vayan directo a la pasarela y nunca pasen por este servidor.
 // Aquí solo se valida el formato y se guardan los 4 últimos dígitos y la marca.
-require_once __DIR__ . '/../includes/funciones.php';
+require_once __DIR__ . '/bootstrap.php';
 verificar_post();
 exigir_paso(['monto', 'tipo', 'nombre', 'email']);
 
@@ -96,7 +96,7 @@ if ($errores) {
     redirigir('pago.php');
 }
 
-require_once __DIR__ . '/../config/db.php';
+require_once APP_DIR . '/config/db.php';
 
 $comprobante = 'SDV-' . strtoupper(bin2hex(random_bytes(4)));
 

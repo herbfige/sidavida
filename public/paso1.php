@@ -1,6 +1,6 @@
 <?php
 // public/paso1.php — valida el monto y la frecuencia, y pasa a los datos del donante.
-require_once __DIR__ . '/../includes/funciones.php';
+require_once __DIR__ . '/bootstrap.php';
 verificar_post();
 
 $opcion = $_POST['opcion'] ?? '';

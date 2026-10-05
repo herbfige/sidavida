@@ -1,6 +1,6 @@
 <?php
 // public/index.php — Paso 1: portada y elección del monto.
-require_once __DIR__ . '/../includes/funciones.php';
+require_once __DIR__ . '/bootstrap.php';
 
 $flash   = flash_leer();
 $errores = $flash['errores'];
@@ -12,7 +12,7 @@ $tipoPrevio  = $previo['tipo'] ?? 'unica';
 
 $titulo = 'Dona';
 $paso   = null;
-require __DIR__ . '/../includes/header.php';
+require APP_DIR . '/includes/header.php';
 ?>
 <section class="hero">
     <div class="contenedor hero__fila">
@@ -93,4 +93,4 @@ require __DIR__ . '/../includes/header.php';
 <script>
     window.IMPACTO = <?= json_encode(array_map(fn ($i) => $i['titulo'], MONTOS), JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?>;
 </script>
-<?php require __DIR__ . '/../includes/footer.php'; ?>
+<?php require APP_DIR . '/includes/footer.php'; ?>

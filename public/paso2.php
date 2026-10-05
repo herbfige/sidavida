@@ -1,6 +1,6 @@
 <?php
 // public/paso2.php — valida los datos del donante y pasa al pago.
-require_once __DIR__ . '/../includes/funciones.php';
+require_once __DIR__ . '/bootstrap.php';
 verificar_post();
 exigir_paso(['monto', 'tipo']);
 

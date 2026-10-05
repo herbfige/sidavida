@@ -1,0 +1,9 @@
+# public/.htaccess — opciones para Apache (cPanel).
+DirectoryIndex index.php
+Options -Indexes
+
+# Forzar HTTPS: activa estas 3 líneas (quita el # del inicio) cuando
+# https://sidavida.org.pe ya abra con candado.
+# RewriteEngine On
+# RewriteCond %{HTTPS} !=on
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
