@@ -69,7 +69,7 @@ a { color: var(--morado); }
 .form__sub { color: var(--gris); margin: 0 0 20px; }
 
 /* Montos */
-.montos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.montos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .monto {
     position: relative; display: flex; flex-direction: column; align-items: center; text-align: center;
     gap: 4px; padding: 26px 12px 18px; border: 2px solid var(--borde); border-radius: var(--radio);
@@ -222,7 +222,6 @@ p.instrucciones { padding-left: 0; margin: 0; }
 /* Responsive */
 @media (max-width: 900px) {
     .montos { grid-template-columns: repeat(2, 1fr); }
-    .monto--otro { grid-column: span 2; }
     .banda { grid-template-columns: 1fr; text-align: center; justify-items: center; }
 }
 @media (max-width: 480px) {

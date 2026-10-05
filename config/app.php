@@ -9,12 +9,12 @@ const PLIN_NUMERO = '987 654 321';
 
 // Montos sugeridos (en soles) y el impacto que explica cada uno.
 const MONTOS = [
-    5  => ['titulo' => 'Información que protege',  'detalle' => 'Material informativo sobre prevención para una persona.', 'icono' => 'info'],
-    10 => ['titulo' => 'Kit de prevención',        'detalle' => 'Información y condones para cuidarse.',                   'icono' => 'escudo'],
-    20 => ['titulo' => 'Prueba de VIH + consejería', 'detalle' => 'Ayudas a que alguien sepa y pueda cuidarse.',          'icono' => 'corazon'],
-    30 => ['titulo' => 'Acompañamiento emocional', 'detalle' => 'Brindas apoyo cuando más lo necesitan.',                 'icono' => 'manos'],
+    25  => ['titulo' => 'Prueba de VIH + consejería', 'detalle' => 'Ayudas a que alguien sepa y pueda cuidarse.', 'icono' => 'corazon'],
+    50  => ['titulo' => 'Acompañamiento emocional',   'detalle' => 'Brindas apoyo cuando más lo necesitan.',     'icono' => 'manos'],
+    100 => ['titulo' => 'Acompañamiento integral',    'detalle' => 'Prueba, consejería y apoyo emocional para una persona.', 'icono' => 'escudo'],
 ];
-const MONTO_DESTACADO = 30;   // Lleva la etiqueta "Más elegido".
+const MONTO_DESTACADO = 50;   // Lleva la etiqueta "Más elegido".
+const TIPO_POR_DEFECTO = 'mensual';
 const MONTO_MINIMO    = 1;
 const MONTO_MAXIMO    = 10000;
 

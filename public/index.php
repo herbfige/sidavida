@@ -8,7 +8,7 @@ $previo  = $flash['valores'] + donacion();
 
 $montoPrevio = $previo['monto'] ?? MONTO_DESTACADO;
 $esOtro      = !array_key_exists((int) $montoPrevio, MONTOS) || (float) $montoPrevio != (int) $montoPrevio;
-$tipoPrevio  = $previo['tipo'] ?? 'unica';
+$tipoPrevio  = $previo['tipo'] ?? TIPO_POR_DEFECTO;
 
 $titulo = 'Dona';
 $paso   = null;
