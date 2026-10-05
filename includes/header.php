@@ -9,6 +9,7 @@ $paso   = $paso ?? null;
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= e($titulo) ?> · <?= e(ORG_NOMBRE) ?></title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="assets/style.css">
@@ -18,8 +19,7 @@ $paso   = $paso ?? null;
 <header class="topbar">
     <div class="contenedor topbar__fila">
         <a class="logo" href="index.php">
-            <span class="logo__lazo"><?= icono('lazo', 26) ?></span>
-            <span>sí, da vida</span>
+            <img src="assets/img/logo.webp" width="87" height="84" alt="<?= e(ORG_NOMBRE) ?>">
         </a>
         <span class="seguro"><?= icono('candado', 16) ?> Donación segura</span>
     </div>

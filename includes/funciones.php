@@ -61,7 +61,6 @@ function verificar_post(): void {
 // Íconos SVG en línea (trazo, heredan el color del texto).
 function icono(string $nombre, int $tam = 28): string {
     $trazos = [
-        'lazo'     => '<path d="M12 3c-2 0-3.2 1.6-3.2 3.4 0 1.9 1.3 4 3.2 6.6 1.9-2.6 3.2-4.7 3.2-6.6C15.2 4.6 14 3 12 3Z"/><path d="M12 13l-5 8M12 13l5 8"/>',
         'corazon'  => '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/>',
         'manos'    => '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/><path d="M8.5 11.5h2l1-1.5 1.5 3 1-1.5h1.5"/>',
         'escudo'   => '<path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z"/><path d="M9 12l2 2 4-4"/>',

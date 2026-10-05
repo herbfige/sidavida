@@ -33,9 +33,9 @@ a { color: var(--morado); }
 
 /* Barra superior */
 .topbar { background: var(--blanco); border-bottom: 1px solid var(--borde); }
-.topbar__fila { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
-.logo { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.25rem; color: var(--texto); text-decoration: none; }
-.logo__lazo { color: var(--rojo); display: flex; }
+.topbar__fila { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; }
+.logo { display: flex; align-items: center; }
+.logo img { display: block; height: 84px; width: auto; }
 .seguro { display: flex; align-items: center; gap: 6px; font-size: .85rem; color: var(--gris); }
 
 /* Pasos */
@@ -229,4 +229,5 @@ p.instrucciones { padding-left: 0; margin: 0; }
     .tarjeta-form { padding: 20px 16px; }
     .pasos__nombre { display: none; }
     .campos-fila { grid-template-columns: 1fr; }
+    .logo img { height: 70px; }
 }
